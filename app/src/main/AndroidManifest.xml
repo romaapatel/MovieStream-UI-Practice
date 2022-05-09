@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieStreamUIPractice">
         <activity
+            android:name=".login.MovieStreamLoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".splashscreen.MovieStreamOnBoardingActivity"
             android:exported="false" />
         <activity

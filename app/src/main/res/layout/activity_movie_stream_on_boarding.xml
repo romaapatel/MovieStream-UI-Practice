@@ -49,6 +49,7 @@
     <Button
         android:id="@+id/btnNext"
         android:layout_width="0dp"
+        style="@style/buttonAppearence"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintWidth_percent="0.5"
@@ -56,6 +57,7 @@
         app:layout_constraintStart_toStartOf="@id/tvSubTitle"
         app:layout_constraintEnd_toEndOf="@id/tvSubTitle"
         android:background="@drawable/moviestream_custombutton"
-        android:text="@string/next"/>
+        android:text="@string/next"
+        android:textAllCaps="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.example.moviestream_ui_practice.MainActivity
 import com.example.moviestream_ui_practice.R
 
 class MovieStreamSplashScreenActivity : AppCompatActivity() {
