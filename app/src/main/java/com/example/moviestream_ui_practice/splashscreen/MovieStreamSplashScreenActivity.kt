@@ -14,6 +14,7 @@ class MovieStreamSplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_stream_splash_screen)
+
         supportActionBar?.hide()
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this@MovieStreamSplashScreenActivity, MovieStreamOnBoardingActivity::class.java)

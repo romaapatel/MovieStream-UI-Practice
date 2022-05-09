@@ -20,6 +20,9 @@
             android:name=".splashscreen.MovieStreamOnBoardingActivity"
             android:exported="false" />
         <activity
+            android:name=".signup.MovieStreamSignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".splashscreen.MovieStreamSplashScreenActivity"
             android:exported="true">
             <intent-filter>

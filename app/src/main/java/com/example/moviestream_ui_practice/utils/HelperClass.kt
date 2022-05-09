@@ -6,6 +6,8 @@ import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.text.style.ForegroundColorSpan
 import android.view.View
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 
 fun colorMyText(inputText: String, startIndex: Int, endIndex: Int, textColor: Int, handler: () -> Unit): Spannable {
     val outPutColoredText: Spannable = SpannableString(inputText)
@@ -29,3 +31,12 @@ class ClickHandler(
         drawState.isUnderlineText = false
     }
 }
+
+fun emailValidator(email: String?): Boolean {
+    val pattern: Pattern
+    val emailPattern = Constant.EMAILPATTERN
+    pattern = Pattern.compile(emailPattern.toString())
+    val matcher: Matcher = pattern.matcher(email)
+    return matcher.matches()
+}
+
