@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MovieStream-UI-Practice</string>
+    <string name="no_image">Image is Loading</string>
+    <string name="movie_start">Movistart</string>
+    <string name="find_and_br">Find and browse your favorite movies anywhere and anytime</string>
+    <string name="next">Next</string>
 </resources>
