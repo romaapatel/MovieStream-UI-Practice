@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primary_color">#6152FF</color>
     <color name="secondary_textcolor">#CBC9D8</color>
+    <color name="main_background">#06041F</color>
+    <color name="button_background">#1C1E34</color>
+    <color name="text_color">#CBC9D8</color>
 </resources>

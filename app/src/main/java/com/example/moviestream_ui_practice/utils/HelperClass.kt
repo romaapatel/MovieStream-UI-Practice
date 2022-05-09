@@ -19,8 +19,7 @@ fun colorMyText(inputText: String, startIndex: Int, endIndex: Int, textColor: In
 
 class ClickHandler(
 
-    private val handler: () -> Unit
-) : ClickableSpan() {
+    private val handler: () -> Unit) : ClickableSpan() {
     override fun onClick(view: View) {
         handler()
     }

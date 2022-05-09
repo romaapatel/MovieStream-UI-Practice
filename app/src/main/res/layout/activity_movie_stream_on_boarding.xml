@@ -49,6 +49,7 @@
     <Button
         android:id="@+id/btnNext"
         android:layout_width="0dp"
+        style="@style/buttonAppearence"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintWidth_percent="0.5"
