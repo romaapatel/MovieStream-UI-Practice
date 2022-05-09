@@ -10,14 +10,40 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieStreamUIPractice">
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".forgotpassword.MovieStreamOTPActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".forgotpassword.MovieStreamForgotPasswordLastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword.MovieStreamResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword.MovieStreamForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".signup.MovieStreamSignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.MovieStreamLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splashscreen.MovieStreamOnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splashscreen.MovieStreamSplashScreenActivity"
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
