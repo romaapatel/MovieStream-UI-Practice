@@ -14,6 +14,9 @@
             android:exported="false">
         </activity>
         <activity
+            android:name=".signup.MovieStreamSignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".login.MovieStreamLoginActivity"
             android:exported="false" />
         <activity
