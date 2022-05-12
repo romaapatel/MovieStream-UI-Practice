@@ -18,6 +18,6 @@ class MovieStreamSplashScreenActivity : AppCompatActivity() {
             val intent = Intent(this@MovieStreamSplashScreenActivity, MovieStreamOnBoardingActivity::class.java)
             startActivity(intent)
             finish()
-        }, 5000)
+        }, 1000)
     }
 }

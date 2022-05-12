@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".forgotpassword.MovieStreamOTPActivity"
+    android:background="@color/main_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVerticalStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVerticalEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <ImageView
+            android:id="@+id/imgForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_otpverification"
+            app:layout_constraintHeight_percent="0.36"
+            android:layout_marginTop="@dimen/_50sdp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/no_image" />
+
+        <TextView
+            android:id="@+id/tvPasswordResetPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imgForgotPassword"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+            android:text="@string/otp_verification"
+            android:textColor="@color/text_color"
+            style="@style/forgotPasswordTextStyle"
+            android:layout_marginTop="@dimen/_20sdp" />
+
+        <TextView
+            android:id="@+id/tvSubTitleOtp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvPasswordResetPassword"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+            android:gravity="center_horizontal|top"
+            android:layout_margin="@dimen/_20sdp"
+            android:maxLines="2"
+            android:text="@string/digit_code_"
+            style="@style/forgotPasswordSubTitleTextStyle"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/btnVerifyOtp"
+            android:layout_width="0dp"
+            style="@style/buttonAppearence"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="@dimen/_30sdp"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+            android:background="@drawable/moviestream_custombutton"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            android:text="@string/verify"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/tvResendOtp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/didn_t_receive_otp"
+            android:textColor="@color/text_color"
+            android:layout_margin="@dimen/_35sdp"
+            style="@style/textAppearence"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/btnVerifyOtp"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+            app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+            android:textAlignment="center"
+            android:focusable="true" />
+
+        <EditText
+            android:id="@+id/etOtpFirst"
+            style="@style/MovieStreamOtp"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+            app:layout_constraintEnd_toStartOf="@id/etOtpSecond"
+            android:importantForAutofill="no"
+            app:layout_constraintHorizontal_chainStyle="spread" />
+
+        <EditText
+            android:id="@+id/etOtpSecond"
+            style="@style/MovieStreamOtp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            app:layout_constraintStart_toEndOf="@id/etOtpFirst"
+            app:layout_constraintEnd_toStartOf="@id/etOtpThird"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etOtpThird"
+            style="@style/MovieStreamOtp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            app:layout_constraintStart_toEndOf="@id/etOtpSecond"
+            app:layout_constraintEnd_toStartOf="@id/etOtpForth"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etOtpForth"
+            style="@style/MovieStreamOtp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            app:layout_constraintStart_toEndOf="@id/etOtpThird"
+            app:layout_constraintEnd_toStartOf="@id/etOtpFifth"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etOtpFifth"
+            style="@style/MovieStreamOtp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            app:layout_constraintStart_toEndOf="@id/etOtpForth"
+            app:layout_constraintEnd_toStartOf="@id/etOtpSixth"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etOtpSixth"
+            style="@style/MovieStreamOtp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubTitleOtp"
+            app:layout_constraintStart_toEndOf="@id/etOtpFifth"
+            app:layout_constraintEnd_toStartOf="@id/guidelineVerticalEnd"
+            android:importantForAutofill="no" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -69,8 +69,9 @@
             app:layout_constraintTop_toBottomOf="@id/btnGoogle"
             android:layout_alignParentTop="true"
             android:layout_marginTop="@dimen/_40sdp"
-            style="@style/textAppearence"
+            android:textSize="@dimen/_12ssp"
             android:text="@string/or"
+            android:textColor="@color/text_color"
             app:layout_constraintStart_toEndOf="@id/viewBefore"
             app:layout_constraintEnd_toStartOf="@id/viewAfter" />
 

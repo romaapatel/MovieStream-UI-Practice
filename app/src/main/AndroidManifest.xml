@@ -10,6 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieStreamUIPractice">
         <activity
+            android:name=".forgotpassword.MovieStreamOTPActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".forgotpassword.MovieStreamForgotPasswordLastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword.MovieStreamResetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword.MovieStreamForgotPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".signup.MovieStreamSignUpActivity"
             android:exported="false" />
         <activity
@@ -20,7 +33,8 @@
             android:exported="false" />
         <activity
             android:name=".splashscreen.MovieStreamSplashScreenActivity"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

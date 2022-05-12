@@ -48,22 +48,22 @@ class MovieStreamSignUpActivity : AppCompatActivity() {
         val isPasswordValid = etSignUpPassword.text.toString().length > 8
         Toast.makeText(this, isEmailValid.toString(), Toast.LENGTH_SHORT).show()
 
-        if(isEmailValid) {
+        if (isEmailValid) {
             etSignUpEmail.error = null
         } else {
-            if (etSignUpEmail.length() == 0 ) {
+            if (etSignUpEmail.text.toString().isEmpty()) {
                 etSignUpEmail.error = getString(R.string.empty_email)
             } else {
                 etSignUpEmail.error = getString(R.string.wrong_email)
             }
         }
 
-        if(isPasswordValid) {
+        if (isPasswordValid) {
             etSignUpPassword.error = null
         } else {
             if (etSignUpPassword.length() == 0) {
                 etSignUpPassword.error = getString(R.string.empty_password_error)
-                if(etSignUpPassword.length() < 8 ) {
+                if (etSignUpPassword.length() < 8) {
                     etSignUpPassword.error = getString(R.string.password_length)
                 } else {
                     etSignUpPassword.error = getString(R.string.invalid_password)

@@ -22,4 +22,15 @@
     <string name="full_name">Full Name</string>
     <string name="do_you_already_login">Do you already have an account? Login now</string>
     <string name="invalid_password">Password Must be Unique</string>
+    <string name="you_forgot_password">You forgot your password? don\'t worry, please enter your recovery email address</string>
+    <string name="submit">Submit</string>
+    <string name="reset_password">Reset Password?</string>
+    <string name="please_enter_new_password">Please enter your new password to update the password</string>
+    <string name="congrats_">Congrats!</string>
+    <string name="congrats_your_password_reset">Congrats your password has been updated please continue to login</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="digit_code_">6 digit code has been sent to Antoniorenders@gmail.com</string>
+    <string name="verify">Verify</string>
+    <string name="didn_t_receive_otp">Didn\'t receive the OTP ? \nResend</string>
 </resources>
