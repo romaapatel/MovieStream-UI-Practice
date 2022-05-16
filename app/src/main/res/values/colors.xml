@@ -13,4 +13,7 @@
     <color name="button_background">#1C1E34</color>
     <color name="text_color">#CBC9D8</color>
     <color name="light_grey">#B0AEBC</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="indicator_button">#DEDEDE</color>
+    <color name="transparent">#9c000000</color>
 </resources>

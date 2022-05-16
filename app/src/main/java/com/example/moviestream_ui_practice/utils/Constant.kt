@@ -14,5 +14,9 @@ object Constant {
     const val FORTYTHREE = 43
     const val FORTYONE = 41
     val EMAILPATTERN : Regex = Regex("String emailPattern = \"[a-zA-Z0-9._-]+@[a-z]+\\\\.com+[a-z]+\"")
-    val PASSWORDPATTERN : Regex = Regex("String PasswordPatten = ^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$")
+    val PASSWORDPATTERN  =  "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$"
+    const val HUNDRED = 100
+    const val TWOHUNDRED = 200L
+    const val TWENTY = 20
+    const val THOUSAND = 1000L
 }
