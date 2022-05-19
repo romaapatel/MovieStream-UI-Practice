@@ -71,4 +71,22 @@
         <item name="android:layout_marginTop">@dimen/_20sdp</item>
         <item name="android:layout_marginEnd">@dimen/_5sdp</item>
     </style>
+
+    <style name="DescriptionScreenTextAppearence">
+        <item name="android:textSize">@dimen/_26ssp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="DescriptionTextSmall" parent="textAppearence">
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="DescriptionButton">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawablePadding">@dimen/_5sdp</item>
+
+    </style>
 </resources>

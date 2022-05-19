@@ -49,4 +49,9 @@
     <string name="comedy">Comedy</string>
     <string name="romance">Romance</string>
     <string name="horror">Horror</string>
+    <string name="disney_s_al">Disney\'s Aladdin</string>
+    <string name="some_id">2019</string>
+    <string name="adventure_c">Adventure,Comedy</string>
+    <string name="h_8m">2h 8m</string>
+    <string name="play">Play</string>
 </resources>

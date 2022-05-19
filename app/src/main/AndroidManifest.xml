@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieStreamUIPractice">
         <activity
+            android:name=".descriptionScreen.MovieStreamDescriptionActivity"
+            android:exported="false" />
+        <activity
             android:name=".homescreen.MovieScreamHomeScreenActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".descriptionScreen.MovieStreamDescriptionActivity"
+    android:background="@color/main_background">
+
+
+
+    <ImageView
+        android:id="@+id/image_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/no_image"/>
+
+    <View
+        android:id="@+id/viewDescription"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:alpha="0.5"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="@id/image_description"
+        app:layout_constraintStart_toStartOf="@id/image_description"
+        app:layout_constraintEnd_toEndOf="@id/image_description"
+        app:layout_constraintBottom_toBottomOf="@id/image_description"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVerticalEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <ImageButton
+        android:id="@+id/imgBtnBack"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="@id/image_description"
+        app:layout_constraintStart_toStartOf="@id/image_description"
+        android:contentDescription="@string/no_image" />
+
+    <ImageButton
+        android:id="@+id/imgBtnShared"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/ic_shared"
+        android:contentDescription="@string/no_image"
+        app:layout_constraintTop_toTopOf="@id/image_description"
+       app:layout_constraintEnd_toEndOf="@id/image_description"/>
+
+    <ImageButton
+        android:id="@+id/imgBtnSave"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:background="@drawable/ic_saverounded"
+        android:contentDescription="@string/no_image"
+        app:layout_constraintTop_toTopOf="@id/image_description"
+        app:layout_constraintEnd_toEndOf="@id/imgBtnShared"/>
+
+    <TextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image_description"
+        app:layout_constraintStart_toStartOf="@id/guidelineVerticalStart"
+        android:text="@string/disney_s_al"
+        app:layout_constraintEnd_toEndOf="@id/guidelineVerticalEnd"
+        android:layout_margin="@dimen/_10sdp"
+        style="@style/DescriptionScreenTextAppearence"/>
+
+    <TextView
+        android:id="@+id/tvMovieYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/some_id"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieName"
+        app:layout_constraintStart_toStartOf="@id/tvMovieName"
+        style="@style/DescriptionTextSmall"/>
+
+    <ImageView
+        android:id="@+id/imageBefore"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:contentDescription="@string/no_image"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieName"
+        app:layout_constraintStart_toEndOf="@id/tvMovieYear"
+        app:layout_constraintEnd_toStartOf="@id/tvMovieType"
+        android:src="@drawable/circle"/>
+
+    <TextView
+        android:id="@+id/tvMovieType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieName"
+        app:layout_constraintStart_toEndOf="@id/imageBefore"
+        android:text="@string/adventure_c"
+        style="@style/DescriptionTextSmall"/>
+
+    <ImageView
+        android:id="@+id/imageAfter"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_margin="@dimen/_6sdp"
+        android:contentDescription="@string/no_image"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieName"
+        app:layout_constraintStart_toEndOf="@id/tvMovieType"
+        app:layout_constraintEnd_toStartOf="@id/tvMovieTime"
+        android:src="@drawable/circle"/>
+
+    <TextView
+        android:id="@+id/tvMovieTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:text="@string/h_8m"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieName"
+        app:layout_constraintStart_toEndOf="@id/tvMovieType"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/DescriptionTextSmall"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPlay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/DescriptionButton"
+        app:layout_constraintWidth_percent="0.39"
+        android:text="@string/play"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableStart="@drawable/ic_play"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieYear"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVerticalStart"
+        android:background="@drawable/description_button" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
