@@ -25,13 +25,13 @@ class ClickHandler(
 
     private val handler: () -> Unit
 ) : ClickableSpan() {
-    override fun onClick(p0: View) {
+    override fun onClick(view: View) {
         handler()
     }
 
-    override fun updateDrawState(ds: TextPaint) {
-        super.updateDrawState(ds)
-        ds.isUnderlineText = false
+    override fun updateDrawState(drawState: TextPaint) {
+        super.updateDrawState(drawState)
+        drawState.isUnderlineText = false
     }
 }
 
@@ -41,9 +41,8 @@ fun loadImage(url: String?, uploadImage: ImageView) {
 
 fun emailValidator(email: String?): Boolean {
     val pattern: Pattern
-    val emailPattern =
-        "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
-    pattern = Pattern.compile(emailPattern)
+    val emailPattern = Constant.EMAILPATTERN
+    pattern = Pattern.compile(emailPattern.toString())
     val matcher: Matcher = pattern.matcher(email)
     return matcher.matches()
 }

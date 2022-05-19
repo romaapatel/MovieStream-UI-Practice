@@ -1,29 +1,26 @@
 package com.example.moviestream_ui_practice.login
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
-import android.util.Log
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.moviestream_ui_practice.R
 import com.example.moviestream_ui_practice.forgotpassword.MovieStreamForgotPasswordActivity
 import com.example.moviestream_ui_practice.homescreen.MovieScreamHomeScreenActivity
 import com.example.moviestream_ui_practice.signup.MovieStreamSignUpActivity
 import com.example.moviestream_ui_practice.utils.Constant
 import com.example.moviestream_ui_practice.utils.colorMyText
-import com.example.moviestream_ui_practice.utils.emailValidator
+import com.example.moviestream_ui_practice.utils.webservices.ApiCallBack
+import com.example.moviestream_ui_practice.utils.webservices.BaseActivity
+import com.example.moviestream_ui_practice.utils.webservices.RequestModel
 import kotlinx.android.synthetic.main.activity_movie_stream_login.btnLogin
 import kotlinx.android.synthetic.main.activity_movie_stream_login.etEmailAddress
 import kotlinx.android.synthetic.main.activity_movie_stream_login.etPassword
 import kotlinx.android.synthetic.main.activity_movie_stream_login.tvAlreadyAccount
 import kotlinx.android.synthetic.main.activity_movie_stream_login.tvForgotPassword
-import kotlinx.android.synthetic.main.activity_movie_stream_sign_up.etFullName
-import kotlinx.android.synthetic.main.activity_movie_stream_sign_up.etSignUpEmail
-import kotlinx.android.synthetic.main.activity_movie_stream_sign_up.etSignUpPassword
+import org.json.JSONObject
 
-class MovieStreamLoginActivity : AppCompatActivity() {
+class MovieStreamLoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,33 +35,33 @@ class MovieStreamLoginActivity : AppCompatActivity() {
         }
 
         btnLogin.setOnClickListener {
-            if (isValidFields()) {
-                val intent = Intent(this@MovieStreamLoginActivity, MovieScreamHomeScreenActivity::class.java)
-                startActivity(intent)
-            } else {
-                Toast.makeText(this, R.string.empty_email, Toast.LENGTH_SHORT).show()
+            val user = JSONObject()
+            val requestModel = RequestModel()
+            user.apply {
+                put(Constant.EMAILKEY, etEmailAddress.text.toString())
+                put(Constant.PASSWORDKEY, etPassword.text.toString())
             }
+            sendPostRequest(user, Constant.SIGNINAPI, Constant.REQUEST_POST, object : ApiCallBack {
+                override fun onSuccess() {
+                   runCatching {
+                       if (isValidFields(etEmailAddress, etPassword)) {
+                           val intent = Intent(this@MovieStreamLoginActivity, MovieScreamHomeScreenActivity::class.java)
+                           startActivity(intent)
+                       } else {
+                           Toast.makeText(this@MovieStreamLoginActivity, R.string.empty_email, Toast.LENGTH_SHORT).show()
+                       }
+                    }
+                }
+                override fun onFailure() {
+                   runCatching {
+                        Toast.makeText(this@MovieStreamLoginActivity, R.string.failure, Toast.LENGTH_LONG).show()
+                    }
+                }
+            })
+
         }
     }
 
-    private fun isValidFields(): Boolean {
-        val isEmailValid = emailValidator(etEmailAddress.text.toString().trim()) && etEmailAddress.text.toString().isNotEmpty()
-        val isPasswordValid = etPassword.text.toString().length > 8 && etPassword.text.toString().isNotEmpty()
-        Toast.makeText(this, isEmailValid.toString(), Toast.LENGTH_SHORT).show()
-
-        if (isEmailValid) {
-            etEmailAddress.error = null
-        } else {
-            etEmailAddress.error = getString(R.string.wrong_email)
-        }
-
-        if (isPasswordValid) {
-            etPassword.error = null
-        } else {
-            etPassword.error = getString(R.string.invalid_password)
-        }
-        return isEmailValid && isPasswordValid
-    }
     private fun onClickSignIn() {
         val intent = Intent(this@MovieStreamLoginActivity, MovieStreamSignUpActivity::class.java)
         startActivity(intent)

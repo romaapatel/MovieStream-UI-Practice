@@ -49,4 +49,6 @@
     <string name="comedy">Comedy</string>
     <string name="romance">Romance</string>
     <string name="horror">Horror</string>
+    <string name="successfully">Successfully</string>
+    <string name="failure">APIFAIL</string>
 </resources>
