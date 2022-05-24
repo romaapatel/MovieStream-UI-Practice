@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollViewSignUp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".signup.MovieStreamSignUpActivity"
@@ -164,8 +165,19 @@
             android:drawablePadding="@dimen/_20sdp"
             android:textColorHint="@color/text_color"
             android:drawableStart="@drawable/ic_password"
-            android:drawableEnd="@drawable/ic_hidden"
             android:backgroundTint="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/ivSignUpPasswordToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/ic_eye"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="@id/etSignUpPassword"
+            app:layout_constraintEnd_toEndOf="@id/etSignUpPassword"
+            app:layout_constraintTop_toTopOf="@id/etSignUpPassword"
+            android:contentDescription="@string/no_image"/>
 
         <Button
             android:id="@+id/btnSignUp"

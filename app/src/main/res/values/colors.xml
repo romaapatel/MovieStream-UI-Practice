@@ -16,4 +16,5 @@
     <color name="transparent_color">#00000000</color>
     <color name="indicator_button">#DEDEDE</color>
     <color name="transparent">#9c000000</color>
+    <color name="red_orange">#FF5349</color>
 </resources>

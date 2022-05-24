@@ -21,7 +21,7 @@
     <string name="sign_up">Sign up</string>
     <string name="full_name">Full Name</string>
     <string name="do_you_already_login">Do you already have an account? Login now</string>
-    <string name="invalid_password">Password Must be Unique</string>
+    <string name="invalid_password">Must contain at least one number and one uppercase and lowercase letter</string>
     <string name="you_forgot_password">You forgot your password? don\'t worry, please enter your recovery email address</string>
     <string name="submit">Submit</string>
     <string name="reset_password">Reset Password?</string>
@@ -49,4 +49,8 @@
     <string name="comedy">Comedy</string>
     <string name="romance">Romance</string>
     <string name="horror">Horror</string>
+    <string name="enter_required_fields">Enter Required Fields</string>
+    <string name="empty_password_email">Please Enter Email and Password</string>
+    <string name="credential_do_not_match">Password Credential don\'t match our System </string>
+    <string name="upload_image">Upload image</string>
 </resources>

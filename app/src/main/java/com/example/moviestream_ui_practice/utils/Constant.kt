@@ -13,10 +13,15 @@ object Constant {
     const val EIGHT = 8
     const val FORTYTHREE = 43
     const val FORTYONE = 41
-    val EMAILPATTERN : Regex = Regex("String emailPattern = \"[a-zA-Z0-9._-]+@[a-z]+\\\\.com+[a-z]+\"")
-    val PASSWORDPATTERN  =  "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$"
+    const val EMAILPATTERN  = "^[_A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+    val PASSWORDPATTERN :Regex = Regex("^" +"(?=.*[@#$%^&+=])" + "(?=\\S+$)" +".{8,}" +"$")
     const val HUNDRED = 100
     const val TWOHUNDRED = 200L
     const val TWENTY = 20
     const val THOUSAND = 1000L
+    const val ERRORKEY = "Error"
+    const val FIVE_H = 500L
+    const val GIFIMAGE = "https://media2.giphy.com/media/26tPgy93ssTeTTSqA/giphy.gif?cid=ecf05e479dtda0kh5p506i3lxb885axq55qbh4w6491ai8mv&rid=giphy.gif&ct=g"
+    const val CAMERA = "Camera"
+    const val DATA = "data"
 }

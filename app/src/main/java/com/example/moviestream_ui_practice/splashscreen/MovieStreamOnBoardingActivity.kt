@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.moviestream_ui_practice.R
+import com.example.moviestream_ui_practice.UploadImageActivity
 import com.example.moviestream_ui_practice.login.MovieStreamLoginActivity
 import com.example.moviestream_ui_practice.utils.Constant
 import com.example.moviestream_ui_practice.utils.colorMyText
@@ -24,7 +25,5 @@ class MovieStreamOnBoardingActivity : AppCompatActivity() {
         }
     }
 
-    private fun onClickMovieStart() {
-
-    }
+    private fun onClickMovieStart() {}
 }
