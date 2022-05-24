@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashscreen.MovieStreamOnBoardingActivity"
+    android:background="@drawable/splashscreen">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_logo_background"
+        app:layout_constraintBottom_toTopOf="@id/tvMainTitle"
+        app:layout_constraintStart_toStartOf="@id/tvMainTitle"
+        app:layout_constraintEnd_toEndOf="@id/tvMainTitle"
+        android:contentDescription="@string/image_warning"/>
+
+    <TextView
+        android:id="@+id/tvMainTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/movie_start"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="@dimen/_25ssp"/>
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvMainTitle"
+        android:text="@string/find_and_browse"
+        android:layout_marginLeft="@dimen/_52sdp"
+        android:layout_marginRight="@dimen/_52sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:textColor="@color/secondary_textcolor"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="@dimen/_11ssp"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_marginBottom="@dimen/_84sdp"
+        app:layout_constraintStart_toStartOf="@id/tvSubTitle"
+        app:layout_constraintEnd_toEndOf="@id/tvSubTitle"
+        android:background="@drawable/moviestream_custombutton"
+        android:text="@string/next"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
