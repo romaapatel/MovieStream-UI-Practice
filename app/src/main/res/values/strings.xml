@@ -4,4 +4,18 @@
     <string name="movie_start">Movistart</string>
     <string name="find_and_browse">Find and browse your favorite movies anywhere and anytime</string>
     <string name="next">Next</string>
+    <string name="login">Login</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="or">or</string>
+    <string name="do_you_already_have_account">Do you already have an account? Sign up now</string>
+    <string name="validation_empty_email">Please Enter Email</string>
+    <string name="validation_empty_password_error">Please Enter Password</string>
+    <string name="validation_password_length">Password length must be more than 8</string>
+    <string name="validation_wrong_email">Please Enter Valid email address</string>
+    <string name="successfully_login">Successfully login</string>
+    <string name="you_need_to_login_first">Sorry you cant you need to login first</string>
 </resources>
